@@ -1,0 +1,64 @@
+{
+  "name": "@acryl/bignumber",
+  "version": "0.0.1",
+  "description": "Acryl Library for work with Bignumber in javascript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "browser": "dist/bignumber.umd.min.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acrylplatform/bignumber.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c && tsc -p ./ -m commonjs",
+    "prepare": "npm run build",
+    "postversion": "npm publish",
+    "prepublish": "npm run test",
+    "postpublish": "git push"
+  },
+  "keywords": [
+    "bignumber",
+    "acryl"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/bignumber.js": "^5.0.0",
+    "bignumber.js": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/long": "^4.0.0",
+    "jest": "^24.9.0",
+    "long": "^4.0.0",
+    "rollup": "^1.20.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-size-snapshot": "^0.10.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript2": "^0.23.0",
+    "ts-jest": "^24.0.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/test/*.+(ts|tsx|js)"
+    ]
+  }
+}
