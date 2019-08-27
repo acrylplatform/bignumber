@@ -1,6 +1,6 @@
 {
   "name": "@acryl/bignumber",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Acryl Library for work with Bignumber in javascript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
