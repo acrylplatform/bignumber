@@ -1,6 +1,6 @@
 {
   "name": "@acryl/bignumber",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Acryl Library for work with Bignumber in javascript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,8 +20,7 @@
     "build": "rollup -c && tsc -p ./ -m commonjs",
     "prepare": "npm run build",
     "postversion": "npm publish",
-    "prepublish": "npm run test",
-    "postpublish": "git push"
+    "prepublish": "npm run test"
   },
   "keywords": [
     "bignumber",
